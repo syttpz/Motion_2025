@@ -1,2 +1,3 @@
-# Motion_2024
-Code for controlling robot motion
+# Motion_2025
+
+ROS Noetic motion stack for our RoboSub robot.  
