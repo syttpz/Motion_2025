@@ -1,0 +1,17 @@
+<launch>
+    <!-- Arduino 1 -->
+    <group ns="front">
+        <node name="front" pkg="rosserial_python" type="serial_node.py" output="screen">
+            <param name="port" value="/dev/ttyACM0"/>
+            <param name="baud" value="57600"/>
+        </node>
+    </group>
+
+    <!-- Arduino 2 -->
+    <group ns="back">
+        <node name="back" pkg="rosserial_python" type="serial_node.py" output="screen">
+            <param name="port" value="/dev/ttyACM1"/>
+            <param name="baud" value="57600"/>
+        </node>
+    </group>
+</launch>
