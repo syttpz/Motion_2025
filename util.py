@@ -47,6 +47,7 @@ def cvCallback(data, sensor):
   
 
 
+
 def cv(sensor):
   # Return the copy of computer vision data to avoid the risk of CV_result being modified while being processed
   return copy.deepcopy(sensor.get("CV_result"))
@@ -80,9 +81,9 @@ def compareClass(bbox, objectName, cvDict):
   if object_id is None:
     raise Exception(f"{objectName} not in cvDict")
   if isinstance(object_id, int):
-    return id == object_id
+    return bbox_class == object_id
   elif isinstance(object_id, (list, tuple, set)):
-    return id in object_id
+    return bbox_class in object_id
   else:
     raise Exception(f"Invalid type for {objectName}'s id in cvDict")
 
